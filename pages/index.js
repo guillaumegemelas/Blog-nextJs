@@ -1,6 +1,7 @@
 import Head from "next/head";
 // import Image from 'next/image'
 import styles from "@/styles/Home.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -12,7 +13,38 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={styles.description}>vous etes sur la page home</div>
+      <div className="container">
+        <h1 className={styles.titre}>Bienvenue sur Code.io</h1>
+        <p className={styles.paraph}>
+          Le blog de la communauté des afficionnados du développement web
+        </p>
+
+        <div className="card-group" style={{ width: 600 }}>
+          <div className="card">
+            <h5 className="card-title">Lisez les articles</h5>
+            <h6 className="card-subtitle">Maximisez votre culture web</h6>
+            <p className="card-text">
+              Chaque auteur tente de vous apporter le plus de valeur par
+              article.
+            </p>
+            <Link className="card-link" legacyBehavior href="/blog">
+              <a>Visiter le blog</a>
+            </Link>
+          </div>
+          <div className="card">
+            <h5 className="card-title">
+              Faites un tour vers la liste des membres
+            </h5>
+            <h6 className="card-subtitle">Faites-vous des amis</h6>
+            <p className="card-text">
+              Ajoutez, invitez et discutez avec les différents membres
+            </p>
+            <Link className="card-link" legacyBehavior href="/users">
+              <a>Découvrez la liste des membres</a>
+            </Link>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

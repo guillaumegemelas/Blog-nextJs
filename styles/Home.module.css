@@ -1,0 +1,21 @@
+.titre {
+  /* text-align: center; */
+  margin-top: 50px;
+
+  font-size: 30px;
+}
+.paraph {
+  font-size: 13px;
+  margin-bottom: 50px;
+}
+.titre {
+  text-align: center;
+  margin-top: 30px;
+}
+.soustitre {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.card-subtitle {
+  font-size: 12px;
+}
