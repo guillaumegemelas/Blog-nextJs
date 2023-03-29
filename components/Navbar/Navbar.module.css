@@ -1,5 +1,5 @@
 .navbar {
-  padding: 10px;
+  padding: 15px;
   background: rgb(57, 161, 226);
   display: flex;
   justify-content: center;
@@ -7,7 +7,7 @@
 }
 
 .navbar a {
-  margin: 0 10px;
+  margin: 0 15px;
   text-decoration: none;
   color: aliceblue;
 }

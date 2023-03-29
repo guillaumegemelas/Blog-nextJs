@@ -2,7 +2,6 @@ import "@/styles/globals.css";
 import { useEffect } from "react";
 
 //import de Bootstrap de node modules
-
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 //import du composant Container

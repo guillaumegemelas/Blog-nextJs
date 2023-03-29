@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "@/styles/Home.module.css";
+import Link from "next/link";
 
 //import pour key unique
 import { v4 as uuidv4 } from "uuid";
@@ -7,8 +8,23 @@ import { v4 as uuidv4 } from "uuid";
 export default function liste(props) {
   console.log(props);
   return (
-    <div>
-      <p>vous etes sur la page liste</p>
+    <div className="container">
+      <h1 className={styles.titre}>La liste des utilisateurs</h1>
+      <div className="card-deck">
+        {props.data.map((item) => (
+          <div key={uuidv4()}>
+            <h5 className="cart-title">{item.name}</h5>
+            <Link
+              className="card-link"
+              legacyBehavior
+              //il va falloir mettre un lien dynamique
+              href={`/articles/${item.name}`}
+            >
+              <a>Contacter</a>
+            </Link>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
