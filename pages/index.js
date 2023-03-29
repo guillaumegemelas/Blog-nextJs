@@ -13,35 +13,51 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="container">
+      <div className="container px-4 pt-5">
+        {/* bootstrap (force padding de 1 à 5) */}
         <h1 className={styles.titre}>Bienvenue sur Code.io</h1>
         <p className={styles.paraph}>
           Le blog de la communauté des afficionnados du développement web
         </p>
+        <div className="row mt-5">
+          {/* la class row renvoie à flexbox de bootsrap */}
+          <div className="col-12 col-sm-6" style={{ minHeight: "200px" }}>
+            {/* partage de l'écran en colonne et small screen à 6 colonnes */}
 
-        <div className="card-group" style={{ width: 600 }}>
-          <div className="card">
-            <h5 className="card-title">Lisez les articles</h5>
-            <h6 className="card-subtitle">Maximisez votre culture web</h6>
-            <p className="card-text">
-              Chaque auteur tente de vous apporter le plus de valeur par
-              article.
-            </p>
-            <Link className="card-link" legacyBehavior href="/blog">
-              <a>Visiter le blog</a>
-            </Link>
+            <div className="card w-100 h-100">
+              <div className="card-body">
+                <h5 className="card-title">Lisez les articles</h5>
+                <h6 className="card-subtitle mb-2 text-muted">
+                  Maximisez votre culture web
+                </h6>
+                <p className="card-text">
+                  Chaque auteur tente de vous apporter le plus de valeur par
+                  article.
+                </p>
+                <Link className="card-link" legacyBehavior href="/blog">
+                  <a>Visitez le blog</a>
+                </Link>
+              </div>
+            </div>
           </div>
-          <div className="card">
-            <h5 className="card-title">
-              Faites un tour vers la liste des membres
-            </h5>
-            <h6 className="card-subtitle">Faites-vous des amis</h6>
-            <p className="card-text">
-              Ajoutez, invitez et discutez avec les différents membres
-            </p>
-            <Link className="card-link" legacyBehavior href="/liste">
-              <a>Découvrez la liste des membres</a>
-            </Link>
+
+          <div className="col-12 col-sm-6" style={{ minHeight: "200px" }}>
+            <div className="card w-100 h-100">
+              <div className="card-body">
+                <h5 className="card-title">
+                  Faites un tour vers la liste des membres
+                </h5>
+                <h6 className="card-subtitle mb-2 text-muted">
+                  Faites-vous des amis
+                </h6>
+                <p className="card-text">
+                  Ajoutez, invitez et discutez avec les différents membres
+                </p>
+                <Link className="card-link" legacyBehavior href="/liste">
+                  <a>Découvrez la liste des membres</a>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>
