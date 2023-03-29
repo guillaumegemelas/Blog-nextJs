@@ -34,7 +34,7 @@ export default function blog(props) {
                   //il va falloir mettre un lien dynamique
                   //   soit avec slug
                   //   href={`/posts/${item.title}`}
-                  //   soit avec l'id
+                  //   soit avec l'id....
                   href={`/posts/${item.id.toString()}`}
                 >
                   <a>Lire cet article</a>
