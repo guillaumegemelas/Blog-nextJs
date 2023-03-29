@@ -1,10 +1,10 @@
-import React from "react";
-import styles from "@/styles/Home.module.css";
-import { v4 as uuidv4 } from "uuid";
+// import React from "react";
+// import styles from "@/styles/Home.module.css";
+// import { v4 as uuidv4 } from "uuid";
 // import { useRouter } from "next/router";
 
 export default function articles(props) {
-  console.log(props);
+  // console.log(props);
 
   //   const router = useRouter();
 
@@ -27,13 +27,13 @@ export default function articles(props) {
 export async function getStaticProps(context) {
   const slug = context.params.articles;
   //   slug renvoie bien le nom du user sur lequel on a cliqué
-  console.log(slug, "log de slug **********************");
+  // console.log(slug, "log de slug **********************");
 
   const result = await fetch("https://jsonplaceholder.typicode.com/users");
   const data = await result.json();
 
   //data renvoie bien les noms des users
-  console.log(data, "log de data staticprops------------------------");
+  // console.log(data, "log de data staticprops------------------------");
 
   const articleEnCours = data.find((item) => item.name === slug);
 
@@ -58,7 +58,7 @@ export async function getStaticPaths() {
   }));
 
   //   params renvoie bien un tableau d'objets avec articles: nom du user
-  console.log(paths, "log de paths+++++++++++++++++++++");
+  // console.log(paths, "log de paths+++++++++++++++++++++");
 
   return {
     paths,

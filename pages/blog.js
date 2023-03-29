@@ -21,7 +21,7 @@ export default function blog(props) {
               className="card-link"
               legacyBehavior
               //il va falloir mettre un lien dynamique
-              href="/blog"
+              href={`/posts/${item.title}`}
             >
               <a>Lire cet article</a>
             </Link>
